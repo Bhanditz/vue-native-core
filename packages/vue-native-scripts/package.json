@@ -3,7 +3,10 @@
   "version": "0.0.14",
   "description": "Compile Vue component to React Native",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
   "bin": {
     "vue-native-scripts": "./src/bin/vue-native-script.js"
   },
@@ -21,7 +24,8 @@
     "node-watch": "^0.5.4",
     "parse5": "^5.0.0",
     "vue-native-template-compiler": "^0.0.12",
-    "walk": "^2.3.9"
+    "walk": "^2.3.9",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "eslint": "^4.0.0"
@@ -32,5 +36,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GeekyAnts/vue-native-core/tree/master/packages/vue-native-scripts"
-  }
+  },
+  "snyk": true
 }
